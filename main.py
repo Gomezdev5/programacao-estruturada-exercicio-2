@@ -124,7 +124,19 @@ def q8():
     valor_total = dias, quilometragem_total
 
     print(f"Valor total a ser pago: R$ {valor_total:.2f}")
-q8()
+def q9():
+    a = int(input("Digite o primeiro número: "))
+    b = int(input("Digite o segundo número: "))
+    c = int(input("Digite o terceiro número: "))
+
+    numeros = [a, b, c]
+    numeros.sort()
+    
 
 
+    numeros_ordenados = (a, b, c)
 
+    
+    print("Números em ordem crescente:", numeros_ordenados[0], numeros_ordenados[1], numeros_ordenados[2])
+
+q9()
