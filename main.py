@@ -58,7 +58,73 @@ def q3():
 
     print(f"A média das notas foi ", media)
 
-q3()
+def q5():
+    N = int(input("Digite o valor de N: "))
+    A = int(input("Digite o valor de A: "))
+    B = int(input("Digite o valor de B: "))
+
+    multiplos = [i for i in range(A, B + 1) if i % N == 0]
+    
+    if multiplos:
+        for multiplo in multiplos:
+            print(multiplo)
+    else:
+        print("INEXISTENTE")
+
+def q6():
+    i = 1
+    n = int(input("Digite um número natural: "))
+    
+    while True:
+        produto = i * (i + 1) * (i + 2)
+        if produto == n:
+            return True
+        elif produto > n:
+            return False
+        i += 1
+        if n:
+            print(f"{n} é um número triangular.")
+        else:
+            print(f"{n} não é um número triangular.")
+
+def q7():
+    n = int(input("Digite um número entre 1 e 40: "))
+
+# Verificar se o valor de n está dentro do intervalo permitido
+    if 1 <= n <= 40:
+        # Loop para realizar as iterações
+        for i in range(1, n + 1):
+            # Gerar a lista de números para a iteração atual e convertê-los para string
+            linha = ' '.join(str(j) for j in range(1, i + 1))
+            
+            print(linha)
+    else:
+        print("Número fora do intervalo permitido. Por favor, digite um número entre 1 e 40.")
+
+def q8():
+    # Solicitar a quantidade de dias e a quilometragem total ao usuário
+    dias = int(input("Digite a quantidade de dias: "))
+    quilometragem_total = float(input("Digite a quilometragem total rodada: "))
+
+    # Preço por diária e cota de quilometragem
+    preco_diaria = 90
+    cota_km_por_dia = 100
+    taxa_extra_por_km = 12
+
+    cota_total = dias * cota_km_por_dia
+
+    valor_diarias = dias * preco_diaria
+
+    quilometragem_excedente = max(0, quilometragem_total - cota_total)
+
+    valor_taxa_extra = quilometragem_excedente * taxa_extra_por_km
+
+    valor_total = valor_diarias + valor_taxa_extra
+
+    valor_total = dias, quilometragem_total
+
+    print(f"Valor total a ser pago: R$ {valor_total:.2f}")
+q8()
 
 
 
